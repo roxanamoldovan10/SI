@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Students attendance</h1>
+  <form #f="ngForm" novalidate>
+      <div class="form-group">
+          <label>Classroom</label>
+          <select #selectedClass name="class" class="form-control">
+              <option *ngFor="let room of rooms" [ngValue]="room.name">{{room.name}}</option>
+          </select>
+        </div>
+  
+  <div>
+    <button (click)="getStudents(selectedClass.value)">Generate</button>
+    <div *ngIf="students && students.length">Students attending:
+      <div *ngFor="let student of students">
+        <div>Email: {{student.user}}</div>
+      </div>
+    </div>
+    <div *ngIf="students == 0" class="error">No attending students</div>
+  </div>
+</form>
+</div>
+

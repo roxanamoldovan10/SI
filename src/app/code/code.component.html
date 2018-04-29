@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Generate code</h1>
+  <form #f="ngForm" novalidate>
+      <div class="form-group">
+          <label>Classroom</label>
+          <select #selectedClass name="class" class="form-control">
+              <!-- <option value='class1'>Class1</option>
+              <option value='class2'>Class2</option> -->
+              <option *ngFor="let room of rooms" [ngValue]="room.name">{{room.name}}</option>
+          </select>
+        </div>
+  
+  <div class="">
+    <button (click)="generate(selectedClass.value)">Generate</button>
+    <div *ngIf="code">Code: {{code}}</div>
+  </div>
+</form>
+</div>
+

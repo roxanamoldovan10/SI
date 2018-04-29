@@ -1,0 +1,10 @@
+<div class="col-md-6 col-md-offset-2">
+  <h1>Register</h1>
+  <h5>Insert code</h5><br>
+  <input #code class="reg-input" type="text" value="Type here" onfocus="this.value = '';"  required=""><br><br>
+  <button (click)="submit(code.value)">Submit</button>
+  <br>
+  <div *ngIf="this.registered" class="success">You are now registered</div>
+  <div *ngIf="this.registered===false" class="error">Incorect code. Plese check the code and make sure you are on the same network</div>
+  <div *ngIf="this.time===false" class="error">Not on time!</div>
+</div>

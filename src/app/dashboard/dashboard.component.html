@@ -1,0 +1,18 @@
+<div *ngIf="loggedin">
+  <ul>
+    <li *ngIf="this.role === '2'"><a (click)="this.code=true; this.attendance=false; this.teachers=false"><i class="fas fa-ellipsis-h"></i><br>Generate code</a></li>
+    <li *ngIf="this.role === '2'"><a (click)="this.attendance=true; this.code=false; this.teachers=false"><i class="fas fa-ellipsis-h"></i><br>Attendance</a></li>
+    <li *ngIf="this.role === '2'"><a (click)="this.teachers=true; this.code=false; this.attendance=false"><i class="fas fa-ellipsis-h"></i><br>Teachers Overview</a></li>
+    <li *ngIf="this.role === '2'"><a (click)="studentsOverview()"><i class="fas fa-ellipsis-h"></i><br>Students Overview</a></li>
+
+    <li *ngIf="this.role === '1'"><a (click)="this.register=true"><i class="fas fa-map-pin"></i><br>Register as present</a></li>
+    <li style="float:right"><a class="profile" (click)="logout()"><i class="fas fa-user"></i><br>Logout</a></li><br>
+  </ul>
+
+  <app-code *ngIf="this.code"></app-code>
+  <app-attendance *ngIf="this.attendance"></app-attendance>
+  <app-register-present *ngIf="this.register"></app-register-present>
+  <app-teachers *ngIf="this.teachers"></app-teachers>
+
+</div>
+
