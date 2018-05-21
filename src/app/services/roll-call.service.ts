@@ -16,7 +16,6 @@ export class RollCallService {
     var options = {code: code, room: classroom, date: date}
     return this.http.post(`http://localhost:3000/cod/code`, options)
     .map((res:Response) => res);
-    // this.http.post('/api/...', code, classroom);
   }
 
   getRooms(user){

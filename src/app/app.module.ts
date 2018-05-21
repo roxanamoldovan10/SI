@@ -1,3 +1,4 @@
+import { TeacherComponent } from './teacher/teacher.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,6 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CodeComponent } from './code/code.component';
 import { RegisterPresentComponent } from './register-present/register-present.component';
-import { TeachersComponent } from './teachers/teachers.component';
 
 
 
@@ -26,7 +26,7 @@ import { TeachersComponent } from './teachers/teachers.component';
     DashboardComponent,
     CodeComponent,
     RegisterPresentComponent,
-    TeachersComponent,
+    TeacherComponent,
     AttendanceComponent
   ],
   imports: [

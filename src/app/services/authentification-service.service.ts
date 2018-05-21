@@ -36,6 +36,14 @@ export class AutentificationServiceService {
             res);
     }
 
+    addTeacher(email: string, password: string): Observable<any> {
+    
+        var options = {email: email, password: password}
+        return this.http.post(`http://localhost:3000/api/add`, options)
+            .map((res:Response) => 
+            res);
+    }
+
     getAuth() {
         console.log(this.authentificated);
         return this.authentificated;
